@@ -10,13 +10,18 @@ Console.Clear();
 Console.Write("Введите число: ");
 int n = int.Parse(Console.ReadLine()!);
 string str = n.ToString();
-while (str.Length < 4 || str.Length > 4)
+
+while (str.Length != 5)
 {
     Console.Write("Вы ошиблись!\nВведите пятизначное число: ");
     n = int.Parse(Console.ReadLine()!);
+    str = n.ToString();
+   
 }
-
 if (str[0] == str[4] && str[1] == str[3])
     Console.WriteLine("да");
 else
     Console.WriteLine("нет");
+
+
+
